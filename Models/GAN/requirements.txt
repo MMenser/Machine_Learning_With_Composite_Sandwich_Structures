@@ -1,5 +1,0 @@
-conda install numpy -y
-conda install matplotlib -y
-conda install keras -y
-conda install tensorflow -y
-conda install tqdm -y

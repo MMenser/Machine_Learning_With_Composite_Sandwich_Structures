@@ -1,9 +1,0 @@
-(x + c) -> Encoder -> (mean, std)
-(mean, std) + noise -> z - latent vector
-(z + c) -> Decoder -> x_hat
-
-This is the forward pass. H.A.W and the condition of bending stiffness are the inputs. They are transformed into latent space, meaning they represent a normal distribution w/ a mean and std.
-We reparametrize using random noise to create z, the latent vector, which has 3 dimensions according to hyperparameters. We use z and bending stiffness (condition) and pass it thru the 
-decoder. The decoder, given the abstract vector/location z and the stiffness, generates a vector of height, angle, and width.
-
-Then, the loss function determines how well the model preformed based on x (the sample H.A.W) and x_hat (the generated H.A.W from the decoder). Backproprogation is used to update model weights.
